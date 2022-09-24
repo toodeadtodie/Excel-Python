@@ -30,7 +30,7 @@ count1 = 0
 for file in excel_files:
     book = openpyxl.load_workbook(file)
     sheet = book.active
-#Date,LT,UTC,STEAMING TIME,DISTANCE and Consumption
+
     Dt = sheet['G5'].value.strftime("%m/%d/%y")
     LT = sheet['G6'].value.strftime("%H:%M")
     UTC = sheet['G7'].value.strftime("%H:%M")
@@ -81,7 +81,7 @@ row =1
 column = 0
 r=1
 c=9
-# For the value of anyother operation
+
 for file in excel_files:
     book = openpyxl.load_workbook(file)
     sheet = book.active
@@ -102,7 +102,7 @@ for file in excel_files:
                 column+=1
             row+=1
             column = 0
-# For the value of Speed Change 
+
     for j in sheet.iter_rows(min_row=30,min_col=15,max_row=32,max_col=23,values_only=True): 
         my_list1 = list(j)
         if type(my_list1[5]) == int:
@@ -140,7 +140,7 @@ count = 0
 for file in excel_files:
     book = openpyxl.load_workbook(file)
     sheet = book.active
-#Date,LT,UTC,STEAMING TIME,DISTANCE and Consumption
+
     Dt = sheet['G5'].value.strftime("%m/%d/%y")
     LT = sheet['G6'].value.strftime("%H:%M")
     UTC = sheet['G7'].value.strftime("%H:%M")
@@ -186,7 +186,7 @@ row =1
 column = 0
 r=1
 c=9
-# For the value of anyother operation
+
 for file in excel_files:
     book = openpyxl.load_workbook(file)
     sheet = book.active
@@ -207,7 +207,7 @@ for file in excel_files:
                 column+=1
             row+=1
             column = 0
-# For the value of Speed Change 
+ 
     for j in sheet.iter_rows(min_row=30,min_col=15,max_row=32,max_col=23,values_only=True): 
         my_list1 = list(j)
         if type(my_list1[5]) == int:
